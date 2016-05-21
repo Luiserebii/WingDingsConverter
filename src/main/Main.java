@@ -1,4 +1,4 @@
-package application;
+package main;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -12,15 +12,12 @@ public class Main extends Application {
 	@Override
 	public void start(Stage primaryStage) {
 		try {
-			Parent root = FXMLLoader.load(getClass().getResource("GUI.fxml"));
+			Parent root = FXMLLoader.load(getClass().getResource("../view/GUI.fxml"));
 			Scene scene = new Scene(root);
-			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
+			scene.getStylesheets().add(getClass().getResource("../view/application.css").toExternalForm());
 			primaryStage.setTitle("WingDings Converter - Alpha v0.1");
 			primaryStage.setScene(scene);
 			primaryStage.show();
-			WingDingsLogic wd = new WingDingsLogic();
-			wd.importWingDingsMap();
-			wd.toWingDings("DARKDARKERYETDARKER");
 		} catch(Exception e) {
 			e.printStackTrace();
 		}

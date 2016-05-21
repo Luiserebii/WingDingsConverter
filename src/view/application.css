@@ -2,14 +2,14 @@
 
 @font-face {
 
-	src: url('../fonts/8bit.ttf');
-	
+	src: url('../../fonts/8bit.ttf');
+
 }
 
 @font-face {
-	
-	src: url('../fonts/Symbola.ttf');
-	
+
+	src: url('../../fonts/Symbola.ttf');
+
 }
 
 .root {
@@ -57,5 +57,7 @@
 
 }
 
-
+.text-area .scroll-bar:vertical:disabled {
+    -fx-opacity: 0;
+}
 

@@ -1,4 +1,4 @@
-package application;
+package main;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -83,19 +83,15 @@ public class WingDingsLogic {
 		for(int i = 0; i < input.length(); i++){ //Iterating through string
 
 			if(wingDingsMap.get(input.charAt(i)) != null){ //If that char of string can be found,
-
 				int temp = wingDingsMap.get(input.charAt(i)); //get the number
 				arrWingDings.add(Character.toChars(temp)); //and convert to real char, add to ArrayList //adding char[], because whole char[] needed for UTF-16 Unicode
-
-			}else {
-
+			} else {
 				arrWingDings.add(Character.toChars((int)(input.charAt(i)))); //otherwise, just add
-
 			}
 		}
 
 		StringBuilder temp = new StringBuilder();
-		
+
 		for (int i = 0; i < arrWingDings.size(); i++){
 			temp.append((char[]) arrWingDings.get(i)); //append to String (which will get character conversion we DO NEED)
 		}
@@ -108,6 +104,8 @@ public class WingDingsLogic {
 
 
 		//NOTE: Unicode larger than 10000 doesn't fit in char, so we keep track of char[] in ArrayList and add them whole to String
+
+//Some leftover pseudocode? Interesting. 5/21/16
 
 //		convert(){
 //
